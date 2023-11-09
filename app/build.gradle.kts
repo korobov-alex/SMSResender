@@ -1,3 +1,5 @@
+
+
 plugins {
     id("com.android.application")
 }
@@ -26,6 +28,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    packagingOptions.resources.excludes.add("META-INF/NOTICE.md")
+    packagingOptions.resources.excludes.add("META-INF/LICENSE.md")
+
+
 }
 
 dependencies {

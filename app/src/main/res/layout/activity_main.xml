@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F8BC34A"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="150dp"
+    tools:layout_editor_absoluteY="50dp">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="360dp"
+        android:layout_height="64dp"
+        android:autofillHints=""
+        android:hint="Input the target email and press &quot;Read SMS&quot;"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColorHint="#6D4C41"
+        app:layout_constraintBottom_toBottomOf="@+id/stop"
+        app:layout_constraintEnd_toEndOf="@+id/read_sms"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="@+id/read_sms"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.407"
+        tools:ignore="HardcodedText,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck,VisualLintOverlap" />
+
+    <Button
+        android:id="@+id/read_sms"
+        android:layout_width="285dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="424dp"
+        android:onClick="Read_SMS"
+        android:text="Read SMS"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="292dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="508dp"
+        android:onClick="onStop"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="386dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/textview"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/target_email"
+        android:layout_width="360dp"
+        android:layout_height="64dp"
+        android:autofillHints=""
+        android:hint="Input the target email and press &quot;Read SMS&quot;"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColorHint="#6D4C41"
+        app:layout_constraintBottom_toBottomOf="@+id/stop"
+        app:layout_constraintEnd_toEndOf="@+id/read_sms"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="@+id/read_sms"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.407"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="405dp"
+        android:layout_height="69dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/sms_resender"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        tools:ignore="MissingConstraints,TextSizeCheck"
+        tools:layout_editor_absoluteY="3dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

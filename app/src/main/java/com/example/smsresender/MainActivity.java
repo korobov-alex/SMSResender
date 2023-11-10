@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     String GMAIL_USER = "alexkorobov95@gmail.com";
-    String GMAIL_PASSWORD = "sbno rjmb baxr atls";
+    String GMAIL_PASSWORD = "";
     private String targetMail = "alexkorobov95@gmail.com";
 
 @Override

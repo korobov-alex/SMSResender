@@ -25,7 +25,7 @@ public class SmsService extends Service {
     private Handler handler;
     private Runnable runnable;
     private String GMAIL_USER = "alexkorobov95@gmail.com";
-    private String GMAIL_PASSWORD = "sbno rjmb baxr atls";
+    private String GMAIL_PASSWORD = "";
     private String targetMail = "alexkorobov95@gmail.com";
 
     @Override

@@ -1,13 +1,18 @@
 package com.example.smsresender;
 
 import android.Manifest;
+import android.app.Service;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,16 +40,17 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     String GMAIL_USER = "alexkorobov95@gmail.com";
     String GMAIL_PASSWORD = "sbno rjmb baxr atls";
-    private String targetMail = "";
+    private String targetMail = "alexkorobov95@gmail.com";
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+
     textView = findViewById(R.id.textView);
     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
-
+    startService(new Intent(this, SmsService.class));
     readSms = findViewById(R.id.read_sms);
     okBtn = findViewById(R.id.ok);
     targetMailField = findViewById(R.id.target_email);
